@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.EditProfile">
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/my_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backbutton"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/leftarrow"
+            android:backgroundTint="#5772C6"
+            android:paddingStart="70dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#5772C6"
+            android:layout_marginLeft="30dp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@drawable/curve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name"
+        android:textColor="#A5B6E8"
+        app:layout_constraintBottom_toTopOf="@+id/editName"
+        app:layout_constraintEnd_toStartOf="@+id/editIcon"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editName" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:inputType="textCapWords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userDP" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textColor="#A5B6E8"
+        app:layout_constraintBottom_toTopOf="@+id/editStatus"
+        app:layout_constraintEnd_toEndOf="@+id/editName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editStatus" />
+
+    <EditText
+        android:id="@+id/editStatus"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:inputType="textCapSentences"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userDP" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Birthday"
+        android:textColor="#A5B6E8"
+        app:layout_constraintBottom_toTopOf="@+id/dob"
+        app:layout_constraintStart_toStartOf="@+id/dob" />
+
+    <EditText
+        android:id="@+id/dob"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:inputType="textCapSentences"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStatus" />
+
+    <ImageView
+        android:id="@+id/dobPicker"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/dob"
+        android:backgroundTint="@color/that_purple"
+        app:layout_constraintEnd_toEndOf="@+id/dob"
+        app:layout_constraintTop_toTopOf="@+id/dob" />
+
+    <TextView
+        android:id="@+id/saveButton"
+        android:layout_width="270dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="184dp"
+        android:background="@drawable/edittext_bg"
+        android:backgroundTint="#5772C6"
+        android:gravity="center"
+        android:text="Save Changes"
+        android:textColor="#CED4E8"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStatus" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userDP"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/default_user"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/editIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/editicon"
+        app:layout_constraintEnd_toEndOf="@+id/userDP"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
